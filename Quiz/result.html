@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results – Easy Game</title>
+  <meta name="description" content="View detailed results and performance analysis on Easy Game.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Easy Game Home">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
+          </svg>
+        </div>
+        <span>Quiz<span class="brand-accent">Master</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html" class="nav-link">Quiz</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button type="button" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="result-wrapper" id="resultPageRoot">
+      <!-- Main Result Scoreboard Card -->
+      <section class="result-card-main">
+        <div class="result-header-kicker">Assessment Report</div>
+        <h1 class="result-title">Quiz Completed!</h1>
+
+        <div class="result-user-info">
+          <div>Student: <span id="resStudentName">--</span></div>
+          <div>•</div>
+          <div>Subject: <span id="resSubject">--</span></div>
+          <div>•</div>
+          <div>Difficulty: <span id="resDifficulty">--</span></div>
+        </div>
+
+        <!-- Animated Circular Score Progress Indicator -->
+        <div class="score-circle-container">
+          <svg class="score-svg" viewBox="0 0 160 160">
+            <circle class="score-bg-circle" cx="80" cy="80" r="70"></circle>
+            <circle class="score-progress-circle" id="scoreProgressCircle" cx="80" cy="80" r="70"></circle>
+          </svg>
+          <div class="score-circle-text">
+            <div class="score-fraction" id="resScoreFraction">-- / --</div>
+            <div class="score-percent" id="resScorePercent">--%</div>
+          </div>
+        </div>
+
+        <!-- Qualitative Score Message -->
+        <div class="performance-message" id="performanceMessage">
+          Evaluating...
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-summary-grid">
+          <div class="summary-stat-box">
+            <div class="stat-icon" style="color: var(--accent-green);">✓</div>
+            <div class="stat-val" id="statCorrect">0</div>
+            <div class="stat-desc">Correct</div>
+          </div>
+
+          <div class="summary-stat-box">
+            <div class="stat-icon" style="color: var(--accent-red);">✕</div>
+            <div class="stat-val" id="statIncorrect">0</div>
+            <div class="stat-desc">Incorrect</div>
+          </div>
+
+          <div class="summary-stat-box">
+            <div class="stat-icon" style="color: var(--accent-amber);">⚠</div>
+            <div class="stat-val" id="statUnanswered">0</div>
+            <div class="stat-desc">Unanswered</div>
+          </div>
+
+          <div class="summary-stat-box">
+            <div class="stat-icon" style="color: var(--primary);">%</div>
+            <div class="stat-val" id="statPercentage">0%</div>
+            <div class="stat-desc">Accuracy</div>
+          </div>
+
+          <div class="summary-stat-box">
+            <div class="stat-icon" style="color: var(--accent-purple);">⏱</div>
+            <div class="stat-val" id="statTimeTaken">00m 00s</div>
+            <div class="stat-desc">Time Taken</div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="result-cta-buttons">
+          <button type="button" class="btn btn-primary btn-lg" id="tryAgainBtn">
+            <!-- Retry Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            Try Again
+          </button>
+
+          <button type="button" class="btn btn-secondary btn-lg" id="chooseAnotherBtn">
+            Choose Another Quiz
+          </button>
+
+          <button type="button" class="btn btn-outline btn-lg" id="viewLeaderboardBtn">
+            View Leaderboard
+          </button>
+        </div>
+      </section>
+
+      <!-- Answer Review Section -->
+      <section class="review-section">
+        <div class="review-header">
+          <h2 class="review-title">Detailed Answer Review</h2>
+          <p class="section-subtitle" style="margin-left: 0; text-align: left;">
+            Review each question, your submitted response, the correct answer, and academic conceptual explanations.
+          </p>
+        </div>
+
+        <div class="review-list" id="answerReviewList">
+          <!-- Dynamic review cards -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>Easy Game Academic Performance Analytics &copy; 2026.</div>
+        <div>B.Tech CSE-DS College Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

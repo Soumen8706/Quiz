@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Quiz – Easy Game</title>
+  <meta name="description" content="Online technical quiz examination in progress on Easy Game.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Easy Game Home">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
+          </svg>
+        </div>
+        <span>Quiz<span class="brand-accent">Master</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="quiz.html" class="nav-link active">Quiz</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button type="button" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="quiz-wrapper" id="quizPageRoot">
+      <!-- Top Quiz Information Banner -->
+      <div class="quiz-top-bar">
+        <div class="quiz-meta-group">
+          <div class="quiz-meta-item">
+            <span class="quiz-meta-label">Student</span>
+            <span class="quiz-meta-value" id="displayStudentName">Student Name</span>
+          </div>
+          <div class="quiz-meta-item">
+            <span class="quiz-meta-label">Subject</span>
+            <span class="quiz-meta-value" id="displaySubject">Subject</span>
+          </div>
+          <div class="quiz-meta-item">
+            <span class="quiz-meta-label">Difficulty</span>
+            <span class="quiz-meta-value" id="displayDifficulty">Medium</span>
+          </div>
+        </div>
+
+        <!-- Timer Display Box -->
+        <div class="quiz-timer-box" id="quizTimerBox">
+          <!-- Clock Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+          </svg>
+          <span id="timerDisplay">10:00</span>
+        </div>
+      </div>
+
+      <!-- Linear Visual Progress Bar -->
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-bar" id="quizProgressBar"></div>
+      </div>
+
+      <!-- Interactive Question Card -->
+      <article class="question-card">
+        <div class="question-header">
+          <span class="question-number-badge" id="questionNumberBadge">Question 1 of 10</span>
+          <span class="question-difficulty-tag tag-medium" id="questionDifficultyTag">Medium</span>
+        </div>
+
+        <h2 class="question-text" id="questionText">Loading question content...</h2>
+
+        <!-- Interactive 4 Options List -->
+        <div class="options-list" id="optionsList">
+          <!-- Dynamically populated options A, B, C, D -->
+        </div>
+      </article>
+
+      <!-- Question Action Buttons -->
+      <div class="quiz-nav-actions">
+        <button type="button" class="btn btn-secondary btn-lg" id="prevQuestionBtn">
+          ← Previous
+        </button>
+
+        <button type="button" class="btn btn-primary btn-lg" id="nextQuestionBtn">
+          Next Question →
+        </button>
+      </div>
+
+      <!-- Question Palette / Quick Jump Grid -->
+      <div class="palette-wrapper">
+        <div class="palette-title">Question Navigation Palette</div>
+        <div class="palette-grid" id="paletteGrid">
+          <!-- Numbers 1..N dynamically injected -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>Easy Game Examination System &copy; 2026. All rights reserved.</div>
+        <div>B.Tech CSE-DS College Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

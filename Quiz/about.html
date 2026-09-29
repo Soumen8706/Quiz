@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Easy Game – Academic Project</title>
+  <meta name="description" content="Overview and technical architecture of Easy Game – B.Tech CSE-DS College Project.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Easy Game Home">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
+          </svg>
+        </div>
+        <span>Quiz<span class="brand-accent">Master</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html" class="nav-link">Quiz</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button type="button" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="about-wrapper">
+      <!-- Page Hero Header -->
+      <section class="about-hero">
+        <div class="hero-badge">🎓 College Project Documentation</div>
+        <h1 class="about-title">About Easy Game</h1>
+        <p class="about-intro">
+          Easy Game is a modern, responsive, client-side online quiz examination platform engineered to help undergraduate engineering students practice core technical subjects, self-assess their concepts, and prepare for placement tests and competitive exams.
+        </p>
+      </section>
+
+      <!-- Section: Purpose & Overview -->
+      <section class="about-section-block">
+        <h2 class="about-block-title">
+          <span>🎯</span> Purpose of Easy Game
+        </h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          In modern computer science and data science education, continuous assessment and active recall are fundamental to mastering abstract algorithmic concepts, systems programming, and database theory.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          Easy Game addresses this need by providing an instant, zero-latency testing interface where students can test their knowledge without requiring account creation, server setup, or database connectivity. Everything executes locally in the web browser, ensuring lightning-fast performance and total offline accessibility.
+        </p>
+      </section>
+
+      <!-- Section: How It Works (7 Steps) -->
+      <section class="about-section-block">
+        <h2 class="about-block-title">
+          <span>🚀</span> How It Works
+        </h2>
+        <div class="workflow-steps">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Select a Subject</h4>
+              <p>Choose from 8 core engineering disciplines including C Programming, Python, Java, DBMS, OS, Computer Networks, Data Structures, and DAA.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Select Difficulty</h4>
+              <p>Pick Easy, Medium, or Hard difficulty to tailor question complexity to your current study stage.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Choose Number of Questions</h4>
+              <p>Select either 5 questions (5-minute test), 10 questions (10-minute test), or 15 questions (15-minute test).</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Enter Your Name</h4>
+              <p>Provide your name to personalize your score report and record your achievement on the platform leaderboard.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Start the Quiz</h4>
+              <p>The platform executes Fisher-Yates randomization to shuffle questions and answer options, preventing memorization bias.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h4>Answer Before the Timer Ends</h4>
+              <p>Navigate through questions freely, revise answers, and monitor the countdown clock with live warning indicators.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">7</div>
+            <div class="step-content">
+              <h4>Submit and View Your Result</h4>
+              <p>Receive an instant score report with percentage accuracy, circular progress ring, and an in-depth answer review with academic explanations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Technologies Used -->
+      <section class="about-section-block">
+        <h2 class="about-block-title">
+          <span>⚙️</span> Technologies Used
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">
+          Easy Game was built entirely using vanilla standard web technologies without external dependencies, libraries, or server backends:
+        </p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon">🌐</div>
+            <div class="tech-name">HTML5</div>
+            <div class="tech-desc">Semantic document markup (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;) ensuring accessibility and clean structure.</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon">🎨</div>
+            <div class="tech-name">CSS3</div>
+            <div class="tech-desc">Custom CSS Variables, Flexbox, CSS Grid, media queries, smooth animations, and dual light/dark themes without CSS frameworks.</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon">⚡</div>
+            <div class="tech-name">Vanilla JavaScript</div>
+            <div class="tech-desc">Modern ES6+ algorithms for question randomization, countdown timers, state management, and real-time DOM updates without jQuery or React.</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon">💾</div>
+            <div class="tech-name">LocalStorage API</div>
+            <div class="tech-desc">Persistent browser client-side storage for active quiz state, student preferences, theme settings, and leaderboard historical rankings.</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.95rem; color: var(--text-secondary);">
+          <strong>Pure Frontend Architecture:</strong> This application requires no Node.js backend, no Python server, no SQL database, and no internet API calls. The entire application runs natively in any modern browser by simply opening <code style="color: var(--primary); font-family: var(--font-mono);">index.html</code>.
+        </div>
+      </section>
+
+      <!-- Section: Subjects Covered -->
+      <section class="about-section-block">
+        <h2 class="about-block-title">
+          <span>📚</span> Subjects Covered in Question Bank
+        </h2>
+        <div class="syllabus-grid">
+          <div class="syllabus-item">
+            <div class="syllabus-name">C Programming</div>
+            <div class="syllabus-topics">Pointers, dynamic memory, storage classes, bitwise logic.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">Python</div>
+            <div class="syllabus-topics">Generators, OOP, list comprehensions, GIL, mutability.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">Java</div>
+            <div class="syllabus-topics">JVM internals, OOP, collections, exception handling.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">DBMS</div>
+            <div class="syllabus-topics">ACID transactions, 1NF-BCNF, SQL joins, B+ Trees.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">Operating System</div>
+            <div class="syllabus-topics">Deadlocks, round-robin, virtual memory, semaphores.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">Computer Networks</div>
+            <div class="syllabus-topics">TCP/IP, subnetting, ARP, DNS, congestion control.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">Data Structures</div>
+            <div class="syllabus-topics">Stacks, queues, AVL trees, heaps, hash tables, tries.</div>
+          </div>
+          <div class="syllabus-item">
+            <div class="syllabus-name">DAA</div>
+            <div class="syllabus-topics">Master Theorem, Greedy, Dynamic Programming, NP-Complete.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- College Project Info Box -->
+      <section class="project-credits-box">
+        <span class="credits-badge">B.Tech CSE-DS College Project</span>
+        <h3 class="credits-title">Easy Game – Online Quiz Platform</h3>
+        <p class="credits-desc">
+          Developed as an academic software engineering capstone for Bachelor of Technology in Computer Science & Engineering (Data Science). Designed and implemented strictly adhering to semantic HTML5, pure CSS3 styling, and vanilla JavaScript engineering principles.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <a href="index.html" class="btn btn-primary btn-lg">Back to Home & Take Quiz</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>Easy Game Academic Project &copy; 2026. Built with HTML5, CSS3, & JavaScript.</div>
+        <div>B.Tech CSE-DS College Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

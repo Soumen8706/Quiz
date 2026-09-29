@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard – Easy Game</title>
+  <meta name="description" content="Easy Game student rankings and performance leaderboard.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Easy Game Home">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
+          </svg>
+        </div>
+        <span>Quiz<span class="brand-accent">Master</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html" class="nav-link">Quiz</a></li>
+          <li><a href="leaderboard.html" class="nav-link active">Leaderboard</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button type="button" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="leaderboard-wrapper">
+      <!-- Title & Actions Bar -->
+      <div class="leaderboard-header-bar">
+        <div>
+          <h1 class="leaderboard-title">Student Leaderboard</h1>
+          <p class="section-subtitle" style="margin-left: 0; text-align: left;">
+            Top rankings across technical engineering subject quizzes.
+          </p>
+        </div>
+
+        <div class="leaderboard-controls">
+          <!-- Subject Filter -->
+          <select id="leaderboardSubjectFilter" class="form-select" style="width: auto; padding: 0.6rem 1rem;">
+            <option value="all">All Subjects</option>
+            <option value="C Programming">C Programming</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="DBMS">DBMS</option>
+            <option value="Operating System">Operating System</option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Data Structures">Data Structures</option>
+            <option value="DAA">DAA</option>
+          </select>
+
+          <!-- Clear History Button -->
+          <button type="button" class="btn btn-danger btn-sm" id="clearLeaderboardBtn">
+            <!-- Trash Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+            </svg>
+            Clear Leaderboard
+          </button>
+        </div>
+      </div>
+
+      <!-- Top 3 Podium Container -->
+      <div class="podium-container" id="podiumContainer">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Leaderboard Data Table -->
+      <div class="table-responsive">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th style="width: 70px;">Rank</th>
+              <th>Student Name</th>
+              <th>Subject</th>
+              <th>Score</th>
+              <th>Percentage</th>
+              <th>Time Taken</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardTableBody">
+            <!-- Populated via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Quick Action CTA -->
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          Take a Quiz Now
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>Easy Game Academic Rankings &copy; 2026. Data persisted via client-side LocalStorage.</div>
+        <div>B.Tech CSE-DS College Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

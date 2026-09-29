@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Game – Online Quiz Platform</title>
+  <meta name="description" content="Interactive online quiz platform for B.Tech CSE-DS students with timed technical tests, instant results, and leaderboard.">
+  <meta property="og:title" content="Easy Game – Online Quiz Platform">
+  <meta property="og:description" content="Interactive online quiz platform for B.Tech CSE-DS students with timed technical tests, instant results, and leaderboard.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Easy Game Home">
+        <div class="brand-icon">
+          <!-- Graduation Cap Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7" />
+          </svg>
+        </div>
+        <span>Quiz<span class="brand-accent">Master</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="#" class="nav-link trigger-quiz-setup">Quiz</a></li>
+          <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button type="button" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-badge">
+          🎓 B.Tech CSE-DS Assessment Platform
+        </div>
+        <h1 class="hero-title">Easy Game</h1>
+        <h2 class="hero-subtitle">"Test Your Knowledge. Improve Your Skills."</h2>
+        <p class="hero-description">
+          Easy Game is an interactive educational examination platform tailored for computer science students to practice core technical subjects through timed, randomized multiple-choice quizzes with instant analytics and feedback.
+        </p>
+
+        <div class="hero-cta-group">
+          <button type="button" class="btn btn-primary btn-lg trigger-quiz-setup">
+            <!-- Play / Start Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+            </svg>
+            START QUIZ
+          </button>
+          <a href="#subjectsSection" class="btn btn-secondary btn-lg">Explore Subjects</a>
+          <a href="leaderboard.html" class="btn btn-outline btn-lg">View Leaderboard</a>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="hero-stats-bar">
+          <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Core Subjects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Curated Questions</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Difficulty Levels</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client-Side Speed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="section" id="subjectsSection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Academic Curriculum</span>
+          <h2 class="section-title">Select a Subject</h2>
+          <p class="section-subtitle">
+            Choose from fundamental computer science and data science subjects mapped to university engineering syllabi.
+          </p>
+        </div>
+
+        <div class="subjects-grid">
+          <!-- 1. C Programming -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(37, 99, 235, 0.12); color: #2563eb;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+            </div>
+            <h3 class="subject-title">C Programming</h3>
+            <p class="subject-desc">Pointers, memory management, storage classes, structs, bitwise operations, and preprocessor directives.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="C Programming">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 2. Python -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <h3 class="subject-title">Python</h3>
+            <p class="subject-desc">Data structures, OOP, list comprehensions, decorators, generators, mutability, and the CPython GIL.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="Python">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 3. Java -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
+              </svg>
+            </div>
+            <h3 class="subject-title">Java</h3>
+            <p class="subject-desc">JVM architecture, OOP principles, interfaces, exception handling, string pool, and collections framework.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="Java">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 4. DBMS -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+              </svg>
+            </div>
+            <h3 class="subject-title">DBMS</h3>
+            <p class="subject-desc">ACID transactions, normalization (1NF-BCNF), SQL queries, indexing, joins, and write-ahead logging.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="DBMS">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 5. Operating System -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="subject-title">Operating System</h3>
+            <p class="subject-desc">Process scheduling, semaphores, deadlock avoidance, paging, virtual memory, and system calls.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="Operating System">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 6. Computer Networks -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(14, 165, 233, 0.12); color: #0ea5e9;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+              </svg>
+            </div>
+            <h3 class="subject-title">Computer Networks</h3>
+            <p class="subject-desc">OSI & TCP/IP models, TCP handshakes, subnetting, ARP, DNS, congestion control, and routing protocols.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="Computer Networks">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 7. Data Structures -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(168, 85, 247, 0.12); color: #a855f7;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+              </svg>
+            </div>
+            <h3 class="subject-title">Data Structures</h3>
+            <p class="subject-desc">Stacks, queues, linked lists, AVL trees, heaps, hash tables, tries, and collision resolution techniques.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="Data Structures">Start Quiz</button>
+            </div>
+          </article>
+
+          <!-- 8. DAA -->
+          <article class="subject-card">
+            <div class="subject-icon-box" style="background: rgba(234, 88, 12, 0.12); color: #ea580c;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+              </svg>
+            </div>
+            <h3 class="subject-title">DAA</h3>
+            <p class="subject-desc">Asymptotic notation, Master Theorem, Greedy methods, Dynamic Programming, NP-completeness, and graph algorithms.</p>
+            <div class="subject-footer">
+              <span class="subject-meta">12 Questions</span>
+              <button type="button" class="btn btn-primary btn-sm trigger-quiz-setup" data-subject="DAA">Start Quiz</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Easy Game Section -->
+    <section class="section" style="background: var(--card-bg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Platform Highlights</span>
+          <h2 class="section-title">Why Choose Easy Game?</h2>
+          <p class="section-subtitle">
+            Engineered with modern frontend web standards to deliver an effortless examination experience.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1. Timed Quizzes -->
+          <div class="feature-card">
+            <span class="feature-icon-wrapper">⏱</span>
+            <h3 class="feature-title">Timed Quizzes</h3>
+            <p class="feature-text">Dynamic countdown timer tailored to test length with real-time visual alerts and automatic submission upon expiry.</p>
+          </div>
+
+          <!-- 2. Instant Results -->
+          <div class="feature-card">
+            <span class="feature-icon-wrapper">📊</span>
+            <h3 class="feature-title">Instant Results</h3>
+            <p class="feature-text">Comprehensive performance breakdown showing accurate score, percentage, time taken, and answer reviews with explanations.</p>
+          </div>
+
+          <!-- 3. Leaderboard -->
+          <div class="feature-card">
+            <span class="feature-icon-wrapper">🏆</span>
+            <h3 class="feature-title">Leaderboard</h3>
+            <p class="feature-text">Persistent ranking table tracking top student performances with podium awards, subject filtering, and instant updates.</p>
+          </div>
+
+          <!-- 4. Multiple Difficulty Levels -->
+          <div class="feature-card">
+            <span class="feature-icon-wrapper">🎯</span>
+            <h3 class="feature-title">Multiple Difficulty Levels</h3>
+            <p class="feature-text">Practice with Easy, Medium, or Hard question tiers to evaluate conceptual understanding from basics to advanced engineering.</p>
+          </div>
+
+          <!-- 5. Multiple Subjects -->
+          <div class="feature-card">
+            <span class="feature-icon-wrapper">📚</span>
+            <h3 class="feature-title">Multiple Subjects</h3>
+            <p class="feature-text">Extensive question bank spanning 8 core CSE-DS curriculum subjects without relying on external APIs or servers.</p>
+          </div>
+
+          <!-- 6. Responsive Design -->
+          <div class="feature-card">
+            <span class="feature-icon-wrapper">📱</span>
+            <h3 class="feature-title">Responsive Design</h3>
+            <p class="feature-text">Clean, touch-friendly UI that seamlessly scales across desktops, laptops, tablets, and smartphones in dark or light mode.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quiz Setup Modal Interface -->
+  <div class="modal-overlay" id="quizSetupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Configure Your Quiz</h2>
+        <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close dialog">✕</button>
+      </div>
+
+      <form id="quizSetupForm" class="modal-body">
+        <!-- Student Name -->
+        <div class="form-group">
+          <label for="studentNameInput" class="form-label">Enter Your Name *</label>
+          <input type="text" id="studentNameInput" class="form-input" placeholder="e.g. John Doe" required autocomplete="name">
+          <div class="form-error-msg" id="nameError">Please enter your name to proceed.</div>
+        </div>
+
+        <!-- Subject Selection -->
+        <div class="form-group">
+          <label for="subjectSelect" class="form-label">Subject *</label>
+          <select id="subjectSelect" class="form-select" required>
+            <option value="C Programming">C Programming</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="DBMS">DBMS</option>
+            <option value="Operating System">Operating System</option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Data Structures">Data Structures</option>
+            <option value="DAA">DAA (Design and Analysis of Algorithms)</option>
+          </select>
+        </div>
+
+        <!-- Difficulty Selection -->
+        <div class="form-group">
+          <label class="form-label">Difficulty Level</label>
+          <div class="segmented-grid">
+            <button type="button" class="segmented-btn diff-btn" data-value="Easy">Easy</button>
+            <button type="button" class="segmented-btn diff-btn active" data-value="Medium">Medium</button>
+            <button type="button" class="segmented-btn diff-btn" data-value="Hard">Hard</button>
+          </div>
+        </div>
+
+        <!-- Question Count Selection -->
+        <div class="form-group">
+          <label class="form-label">Number of Questions</label>
+          <div class="segmented-grid">
+            <button type="button" class="segmented-btn count-btn" data-value="5">5 Questions (5 min)</button>
+            <button type="button" class="segmented-btn count-btn active" data-value="10">10 Questions (10 min)</button>
+            <button type="button" class="segmented-btn count-btn" data-value="15">15 Questions (15 min)</button>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+          <!-- Launch Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m0 0L21 3" />
+          </svg>
+          Start Quiz
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">
+            <span>Easy Game</span>
+          </div>
+          <p class="footer-desc">
+            An online technical examination platform crafted for B.Tech Computer Science and Data Science students to test and benchmark their domain skills.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link trigger-quiz-setup">Take a Quiz</a></li>
+            <li><a href="leaderboard.html" class="footer-link">Leaderboard</a></li>
+            <li><a href="about.html" class="footer-link">About Project</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Key Subjects</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link trigger-quiz-setup" data-subject="C Programming">C Programming</a></li>
+            <li><a href="#" class="footer-link trigger-quiz-setup" data-subject="Python">Python</a></li>
+            <li><a href="#" class="footer-link trigger-quiz-setup" data-subject="DBMS">DBMS</a></li>
+            <li><a href="#" class="footer-link trigger-quiz-setup" data-subject="DAA">DAA</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Easy Game Platform. Built with HTML5, CSS3, & Vanilla JavaScript.</div>
+        <div>B.Tech CSE-DS College Capstone Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
